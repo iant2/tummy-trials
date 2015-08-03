@@ -41,4 +41,23 @@
     }) 
 
   })
+
+.controller('slidercontroller', function($scope) {
+  
+  $scope.lazyArray = [
+        {value : "A"},{value : "B"},{value : 2},{value : 3},{value : 4}  
+    ];
+    
+    $scope.slider = {};
+    $scope.slider.rangeValue = 0;
+    
+    $scope.$watch('slider.rangeValue',function(val,old){
+       $scope.slider.rangeValue = parseInt(val);
+    });
+    
+    $scope.rangeFilter = function(number) {
+        return (number.value > $scope.slider.rangeValue);
+    }
+})
+
 );

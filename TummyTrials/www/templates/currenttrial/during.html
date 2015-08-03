@@ -7,14 +7,22 @@
 		<p>{{text.during.subtitle}}</p>
 		<br/>
 
-    
-    <div class="item range range-energized">
-      <i class="icon ion-volume-low"></i>
-      <input type="range" name="symptom" min="0" max="4" value="2" />
-      <i class="icon ion-volume-high"></i>
-    </div>
-    Symptom level: {{slider.rangeValue}}
+          <div class="list">
+            <div class="item range">  
+              <i class="icon ion-volume-low"></i>
+              <input type="range" name="volume" min="0" max="4" value="{{slider.rangeValue}}" ng-model="slider.rangeValue">
+              <i class="icon ion-volume-high"></i>
+            </div>
 
+            <div class="item item-divider">
+              Range Value : {{slider.rangeValue}}
+            </div>
+          </div>
+
+          <list class="card">
+            <item ng-repeat="number in lazyArray|filter:rangeFilter" item="item">
+            {{number.value}}
+          </list>
 
     <div class="button-bar">
   		<a class="button button-block button-royal" ui-sref="#">

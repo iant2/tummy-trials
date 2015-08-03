@@ -26,16 +26,3 @@
 	text-align:center;
 }
 
-.range{
-	margin-top: 150px; /* hard coding margins to prevent overlap of divs */
-    margin-bottom:200px;
-    -ms-transform: rotate(-90deg); /* IE 9 */
-    -webkit-transform: rotate(-90deg) translateX(-300px); /* Chrome, Safari, Opera */
-    transform: rotate(-90deg) translateY(-120px); /* hardcoding Y translation to move div from screen center to side. */
-}
-
-.range i.icon{
-    -ms-transform: rotate(90deg);  /* IE 9 */
-    -webkit-transform: rotate(90deg);  /* Chrome, Safari, Opera */
-    transform: rotate(90deg);
-  } 
